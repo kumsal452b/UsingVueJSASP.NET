@@ -8,11 +8,11 @@ namespace Vue.Domain
 {
     public class User
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string name { get; set; }
         public string surname { get; set; }
         public string usernaname { get; set; }
         public string password { get; set; }
-        public Admin Admin { get; set; }
+        public ICollection<Admin> Admins { get; set; }
     }
 }
