@@ -13,5 +13,6 @@ namespace Vue.Domain
         public string surname { get; set; }
         public string usernaname { get; set; }
         public string password { get; set; }
+        public Admin Admin { get; set; }
     }
 }
