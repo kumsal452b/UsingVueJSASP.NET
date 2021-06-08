@@ -1,0 +1,17 @@
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\Vue.DAL.dll.config
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\Vue.DAL.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\Vue.DAL.pdb
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\EntityFramework.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\Vue.Domain.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\Vue.Domain.pdb
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\Vue.Domain.dll.config
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\EntityFramework.xml
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.csproj.AssemblyReference.cache
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.csproj.CoreCompileInputs.cache
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.csproj.CopyComplete
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.pdb
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.Migrations.InitialCreate.resources
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.csproj.GenerateResource.cache

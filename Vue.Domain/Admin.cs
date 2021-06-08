@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Vue.Domain
 {
-    class Admin
+   public class Admin
     {
         public int id { get; set; }
         public int userId { get; set; }

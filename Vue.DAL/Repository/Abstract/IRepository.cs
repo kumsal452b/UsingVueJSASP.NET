@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace Vue.DAL.Repository.Abstract
 {
-    class IRepository
+    public interface IRepository<TEntity> where TEntity:class
     {
+        IEnumerable<TEntity> GetAll();
+        TEntity GetById(int id);
+        void Remove(TEntity entity);
+        void Add(TEntity entity);
+
     }
 }

@@ -1,0 +1,12 @@
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\Vue.Domain.dll.config
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\Vue.Domain.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\Vue.Domain.pdb
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\EntityFramework.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\EntityFramework.xml
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\obj\Debug\Vue.Domain.csproj.AssemblyReference.cache
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\obj\Debug\Vue.Domain.csproj.CoreCompileInputs.cache
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\obj\Debug\Vue.Domain.csproj.CopyComplete
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\obj\Debug\Vue.Domain.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.Domain\obj\Debug\Vue.Domain.pdb
