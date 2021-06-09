@@ -1,7 +1,8 @@
-﻿
+﻿@using Vue.Domain
 @{
     ViewBag.Title = "Index";
 }
+@model IEnumerable<User>
 <script src="~/Scripts/bootstrap.js"></script>
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
@@ -56,21 +57,18 @@
         el: '#app',
         data: {
             UserData: [],
-            Name: '',
-            role: '',
-            message: 'Selam millet calisti'
+            username: '',
+            password: ''
         },
         methods: {
             OnSubmit: function () {
-                console.log("Deneme");
-                var object = { "name": this.Name, "role": this.role };
-                $.ajax({
-                    type: 'POST',
-                    url: 'Vue/',
-                    data: JSON.stringify("user": object),
-                    dataType: "JSON"
-                });
+
             }
+        },
+        created: function () {
+             for (var item in '@Model') {
+                    console.log("yahya");
+                }
         }
     })
 

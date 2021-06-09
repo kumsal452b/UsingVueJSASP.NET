@@ -85,3 +85,5 @@ C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\UsingVueJSASP.NET\obj\Deb
 C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\UsingVueJSASP.NET\obj\Debug\UsingVueJSASP.NET.csproj.CopyComplete
 C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\UsingVueJSASP.NET\obj\Debug\UsingVueJSASP.NET.dll
 C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\UsingVueJSASP.NET\obj\Debug\UsingVueJSASP.NET.pdb
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\UsingVueJSASP.NET\bin\EntityFramework.SqlServer.dll
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\UsingVueJSASP.NET\bin\EntityFramework.SqlServer.xml

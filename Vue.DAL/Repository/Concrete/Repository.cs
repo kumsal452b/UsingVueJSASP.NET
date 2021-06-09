@@ -20,22 +20,22 @@ namespace Vue.DAL.Repository.Concrete
 
         public void Add(TEntity entity)
         {
-            throw new NotImplementedException();
+            dbSet.Add(entity);
         }
 
         public IEnumerable<TEntity> GetAll()
         {
-            throw new NotImplementedException();
+            return dbSet.ToList();
         }
 
         public TEntity GetById(int id)
         {
-            throw new NotImplementedException();
+            return dbSet.Find(id);
         }
 
         public void Remove(TEntity entity)
         {
-            throw new NotImplementedException();
+            dbSet.Remove(entity);
         }
     }
 }
