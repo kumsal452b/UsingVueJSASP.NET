@@ -6,7 +6,9 @@
 <script src="~/Scripts/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
 <link href="~/Scripts/Style.css" rel="stylesheet" />
-<div class="container">
+<script src="~/Scripts/vue.js"></script>
+<script src="~/Scripts/vue.min.js"></script>
+<div class="container" id="app">
     <div class="d-flex justify-content-center">
         <div class="card">
             <div class="card-header">
@@ -36,9 +38,11 @@
                         <input type="checkbox">Remember Me
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Login" class="btn float-right login_btn">
+                        <input type="OnSubmit" value="Login" class="btn float-right login_btn">
                     </div>
                 </form>
+                <button v-on:click="OnSubmit">Tikla</button>
+                <p>{{message}}</p>
             </div>
             <div class="card-footer">
                 this is footer
@@ -46,4 +50,28 @@
         </div>
     </div>
 </div>
+
+<script>
+    var app = new Vue({
+        el: '#app',
+        data: {
+            UserData: [],
+            Name: '',
+            role: '',
+            message: 'Selam millet calisti'
+        },
+        methods: {
+            OnSubmit: function () {
+                var object = { "name": this.Name, "role": this.role };
+                $.ajax({
+                    type: 'POST',
+                    url: 'Vue/',
+                    data: JSON.stringify("user": object),
+                    dataType: "JSON"
+                });
+            }
+        }
+    })
+
+</script>
 

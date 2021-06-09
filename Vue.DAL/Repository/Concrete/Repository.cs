@@ -7,7 +7,7 @@ using Vue.DAL.Repository.Abstract;
 
 namespace Vue.DAL.Repository.Concrete
 {
-    class Repository<TEntity> : IRepository<TEntity> where TEntity : class
+    public class Repository<TEntity> : IRepository<TEntity> where TEntity : class
     {
         public void Add(TEntity entity)
         {
