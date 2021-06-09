@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using Vue.Domain;
 namespace Vue.DAL
 {
-    class VueContext:DbContext
+    public class VueContext:DbContext
     {
         public VueContext():base("myDbContext")
         {

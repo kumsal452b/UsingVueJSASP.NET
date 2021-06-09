@@ -9,8 +9,8 @@ namespace Vue.DAL
 {
     public interface IUnitOfWork:IDisposable
     {
-        IAdminRepository AdminRepository { get; set; }
-        IUserRepository UserRepository { get; set; }
+        IAdminRepository AdminRepository { get; }
+        IUserRepository UserRepository { get;}
 
         int complete();
 

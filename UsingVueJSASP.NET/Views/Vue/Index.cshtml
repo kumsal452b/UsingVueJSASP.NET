@@ -62,6 +62,7 @@
         },
         methods: {
             OnSubmit: function () {
+                console.log("Deneme");
                 var object = { "name": this.Name, "role": this.role };
                 $.ajax({
                     type: 'POST',

@@ -10,6 +10,10 @@ namespace Vue.DAL.Repository.Concrete
 {
     public class UserRepository:Repository<User>,IUserRepository
     {
+        public UserRepository(VueContext context):base(context)
+        {
+
+        }
 
     }
 }

@@ -8,8 +8,12 @@ using Vue.Domain;
 
 namespace Vue.DAL.Repository.Concrete
 {
-    class AdminRepository:Repository<Admin>,IAdminRepository
+    public class AdminRepository:Repository<Admin>,IAdminRepository
     {
+        public AdminRepository(VueContext context):base(context)
+        {
+
+        }
 
     }
 }
