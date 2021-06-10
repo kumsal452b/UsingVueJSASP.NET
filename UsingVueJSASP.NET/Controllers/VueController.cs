@@ -31,10 +31,10 @@ namespace UsingVueJSASP.NET.Controllers
             return View(getList);
         }
   
-        public ActionResult SignIn()
+        public JsonResult SignIn()
         {
             var getList = theWork.UserRepository.GetAll();
-            return View(getList);
+            return Json(getList, JsonRequestBehavior.AllowGet);
         }
     }
 }

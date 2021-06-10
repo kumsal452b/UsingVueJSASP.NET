@@ -12,7 +12,7 @@
 <script src="~/Scripts/vue.min.js"></script>
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-<div class="container" >
+<div class="container">
     <div class="d-flex justify-content-center">
         <div class="card">
 
@@ -56,26 +56,9 @@
 
 <script>
     $(document).ready(function () {
-        $.ajax(
-            {
-                url: '/Vue/SignIn',
-                dataType: "JSON",
-                method: 'GET',
-                success: function (data) {
-                    console.log("succes " + data);
-                },
-                failure: function (response) {
-                    alert(response.d);
-                },
-                error: function (hata, ajaxOptions, thrownError) {
-                    alert(hata.status);
-                    alert(thrownError);
-                    console.log(hata.responseText);
-                }
-            }
-        );
+
     });
-   
+
     var app = new Vue({
         el: '#app',
         data: {
@@ -90,29 +73,47 @@
         },
         created: function () {
 
-            
+
             var ele = this;
-                @*$.post("@Url.Action("SignIn", "Vue",new { id=2})",
-                    function (data1) {
-                        ele.UserData = data1.Result
-                        if (data1.StatusCode == 200 && data1.ErrorMessage == "")
-                            ele.UserData = data1.Result
+                $.post("@Url.Action("SignIn", "Vue", null)",
+                    function (data) {
+                        console.log(data);
+                        ele.UserData = data.Result
+                        if (data.StatusCode == 200 && data.ErrorMessage == "")
+                         ele.UserData = data.Result
                         else {
-                            console.log(data1.ErrorMessage);
-                            console.log(data1.StatusCode);
+                        console.log(data1.ErrorMessage);
+                        console.log(data1.StatusCode);
 
                         }
-                        console.log(data1);
 
-                    }
+                }
                 )
                     .done(function () {
                         console.log("Problem has been solved");
                     }).fail(function (error) {
                         console.log(error.ErrorMessage);
-                    });*@
-           
- 
+                    });
+            //$.ajax(
+            //    {
+            //        url: '/vue/signın',
+            //        datatype: 'json',
+            //        method: 'post',
+            //        success: function (data) {
+            //            ele.userdata = data;
+            //        },
+            //        failure: function (response) {
+            //            alert("res " + response.d);
+            //        },
+            //        error: function (hata, ajaxoptions, thrownerror) {
+            //            alert(hata.status);
+            //            alert(thrownerror);
+            //            console.log(hata.responsetext);
+            //        }
+            //    }
+            //);
+            console.log("user eleent "+ele.UserData)
+
         }
     })
 
