@@ -30,11 +30,11 @@ namespace UsingVueJSASP.NET.Controllers
             var getList = theWork.UserRepository.GetAll();
             return View(getList);
         }
-        [HttpPost]
-        public IEnumerable<User> SignIn(int id)
+  
+        public ActionResult SignIn()
         {
             var getList = theWork.UserRepository.GetAll();
-            return getList;
+            return View(getList);
         }
     }
 }
