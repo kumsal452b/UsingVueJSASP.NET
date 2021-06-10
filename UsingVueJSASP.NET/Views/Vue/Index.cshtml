@@ -9,9 +9,29 @@
 <link href="~/Scripts/Style.css" rel="stylesheet" />
 <script src="~/Scripts/vue.js"></script>
 <script src="~/Scripts/vue.min.js"></script>
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/bootstrap.js"></script>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<table>
+    <thead>
+        <tr>
+            <td>Name</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            @foreach (var item in @Model)
+            {
+                <td>@item.name</td>
+            }
+        </tr>
+    </tbody>
+</table>
 <div class="container" id="app">
     <div class="d-flex justify-content-center">
         <div class="card">
+
             <div class="card-header">
                 <h3>Sígn In</h3>
                 <div class="d-flex justify-content-end social_icon">
@@ -53,6 +73,22 @@
 </div>
 
 <script>
+    $.ajax(
+        {
+            url: '/Vue/Index',
+            dataType: "JSON",
+            method: 'POST',
+            success: function (data) {
+                console.log("succes " + data);
+            },
+            failure: function (response) {
+                alert(response.d);
+            },
+            error: function (response) {
+                alert(response.d);
+            }
+        }
+    );
     var app = new Vue({
         el: '#app',
         data: {
@@ -66,9 +102,30 @@
             }
         },
         created: function () {
-             for (var item in '@Model') {
-                    console.log("yahya");
-                }
+
+            
+            var ele = this;
+                @*$.post("@Url.Action("SignIn", "Vue",new { id=2})",
+                    function (data1) {
+                        ele.UserData = data1.Result
+                        if (data1.StatusCode == 200 && data1.ErrorMessage == "")
+                            ele.UserData = data1.Result
+                        else {
+                            console.log(data1.ErrorMessage);
+                            console.log(data1.StatusCode);
+
+                        }
+                        console.log(data1);
+
+                    }
+                )
+                    .done(function () {
+                        console.log("Problem has been solved");
+                    }).fail(function (error) {
+                        console.log(error.ErrorMessage);
+                    });*@
+           
+ 
         }
     })
 

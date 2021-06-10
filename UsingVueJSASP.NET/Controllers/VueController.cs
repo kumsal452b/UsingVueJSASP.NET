@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Vue.DAL;
+using Vue.Domain;
 
 namespace UsingVueJSASP.NET.Controllers
 {
@@ -21,6 +22,19 @@ namespace UsingVueJSASP.NET.Controllers
         {
             var getList = theWork.UserRepository.GetAll();
             return View(getList);
+        }
+      
+        [HttpPost]
+        public ActionResult Index(int id)
+        {
+            var getList = theWork.UserRepository.GetAll();
+            return View(getList);
+        }
+        [HttpPost]
+        public IEnumerable<User> SignIn(int id)
+        {
+            var getList = theWork.UserRepository.GetAll();
+            return getList;
         }
     }
 }
