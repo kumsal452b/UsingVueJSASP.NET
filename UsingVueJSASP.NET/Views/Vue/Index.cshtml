@@ -12,7 +12,16 @@
 <script src="~/Scripts/vue.min.js"></script>
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-ellipse-progress/dist/vue-ellipse-progress.umd.min.js"></script>
 <div class="container" id="app">
+    <vue-ellipse-progress :gap="10">
+        <template v-slot:legend-value>
+            <span slot="legend-value">/200</span>
+        </template>
+        <template v-slot:legend-caption>
+            <p slot="legend-caption">TASKS DONE</p>
+        </template>
+    </vue-ellipse-progress>
     <div class="d-flex justify-content-center">
         <div class="card">
 
@@ -67,11 +76,12 @@
             password: ''
         },
         methods: {
-            OnSubmit: function () {
-
-            },
             checkIn: function () {
-                console.log("deneme");
+                var username = $('#user').text();
+                var password = $('#pass');
+                if (username == "" || password=="") {
+                    
+                }
             }
         },
         created: function () {
@@ -115,7 +125,6 @@
 
         }
     })
-    //app.checkIn();
 
 </script>
 
