@@ -39,14 +39,14 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-user"></i></span>
                         </div>
-                        <input type="text" class="form-control" placeholder="username">
+                        <input id="user" type="text" class="form-control" placeholder="username">
 
                     </div>
                     <div class="input-group form-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text"><i class="fas fa-key"></i></span>
                         </div>
-                        <input type="password" class="form-control" placeholder="password">
+                        <input id="pass" type="password" class="form-control" placeholder="password">
                     </div>
                     <div class="row align-items-center remember">
                         <input type="checkbox">Remember Me
@@ -77,15 +77,15 @@
             show: true
         },
         methods: {
-            var theTemp = this;
             checkIn: function () {
-                var username = $('#user').text();
-                var password = $('#pass');
+                var theTemp = this;
+                var username = $('#user').val();
+                var password = $('#pass').val();
                 if (username == "" || password == "") {
                     alert("Username and Password must be more 0 charecter ");
                     return;
                 }
-                for (var i = 0; i < theTemp.UserData.lenght(); i++) {
+                for (var i = 0; i < theTemp.UserData.length(); i++) {
 
                 }
             }
