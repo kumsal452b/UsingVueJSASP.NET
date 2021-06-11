@@ -85,9 +85,13 @@
                     alert("Username and Password must be more 0 charecter ");
                     return;
                 }
-                for (var i = 0; i < theTemp.UserData.length(); i++) {
-
+                for (var i = 0; i < theTemp.UserData.length; i++) {
+                    if (theTemp.UserData[i].usernaname == username && theTemp.UserData[i].password == password) {
+                        window.location = "@Url.Action("SignIn", "Vue")?id=" + theTemp.UserData[i].Id;
+                        return;
+                    }
                 }
+                alert("Username or Password are wrong");
             }
         },
         created: function () {
