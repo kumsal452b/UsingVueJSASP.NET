@@ -42,8 +42,8 @@
                     <div class="row align-items-center remember">
                         <input type="checkbox">Remember Me
                     </div>
-                    <div class="form-group">
-                        <input type="button" onclick="checkIn" value="Login" class="btn float-right login_btn">
+                    <div class="form-group" id="app">
+                        <input type="button" v-on:click="checkIn" value="Login" class="btn float-right login_btn">
                     </div>
                 </form>
             </div>
@@ -70,7 +70,7 @@
             OnSubmit: function () {
 
             },
-            ckeckIn: function () {
+            checkIn: function () {
                 console.log("deneme");
             }
         },
@@ -115,6 +115,7 @@
 
         }
     })
+    //app.checkIn();
 
 </script>
 
