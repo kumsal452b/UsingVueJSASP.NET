@@ -12,7 +12,7 @@
 <script src="~/Scripts/vue.min.js"></script>
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
-<div class="container">
+<div class="container" id="app">
     <div class="d-flex justify-content-center">
         <div class="card">
 
@@ -43,7 +43,7 @@
                         <input type="checkbox">Remember Me
                     </div>
                     <div class="form-group">
-                        <input type="OnSubmit" value="Login" class="btn float-right login_btn">
+                        <input type="button" onclick="checkIn" value="Login" class="btn float-right login_btn">
                     </div>
                 </form>
             </div>
@@ -69,6 +69,9 @@
         methods: {
             OnSubmit: function () {
 
+            },
+            ckeckIn: function () {
+                console.log("deneme");
             }
         },
         created: function () {
@@ -76,14 +79,10 @@
 
             var ele = this;
                 $.post("@Url.Action("SignIn", "Vue", null)",
-                    function (data) {
-                        console.log(data);
-                        ele.UserData = data.Result
-                        if (data.StatusCode == 200 && data.ErrorMessage == "")
-                         ele.UserData = data.Result
+                    function (data, status, jqXHR) {
+                        if (status == 'success')
+                            ele.UserData = data;
                         else {
-                        console.log(data1.ErrorMessage);
-                        console.log(data1.StatusCode);
 
                         }
 
