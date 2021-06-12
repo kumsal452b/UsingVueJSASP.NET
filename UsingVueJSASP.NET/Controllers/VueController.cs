@@ -33,6 +33,15 @@ namespace UsingVueJSASP.NET.Controllers
   
         public ActionResult SignIn(int id)
         {
+            var theAdminCheck = theWork.AdminRepository.GetById(id);
+            if (theAdminCheck == null)
+            {
+                ViewBag.isAdmin = true;
+            }
+            else
+            {
+                ViewBag.isAdmin = false;
+            }
             return View(id);
         }
         [HttpPost]
@@ -41,6 +50,5 @@ namespace UsingVueJSASP.NET.Controllers
             var getList = theWork.UserRepository.GetById(id);
             return Json(getList, JsonRequestBehavior.AllowGet);
         }
-
     }
 }

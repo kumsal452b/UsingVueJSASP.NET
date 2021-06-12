@@ -1,15 +1,18 @@
 ﻿
 @{
     ViewBag.Title = "SignIn";
+    var isAdmin = ViewBag.isAdmin;
 }
 @model int
 
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
+<script src="~/Scripts/vue.js"></script>
+<script src="~/Scripts/vue.min.js"></script>
 
-<div class="nav navbar">
-    <div class="nav-item">
-        <p></p>
+<div class="nav navbar" id="app">
+    <div class="nav-item align-baseline" id="app" v-if="@isAdmin=='true'">
+        <p>{{userData.name}} {{userData.surname}}</p>
     </div>
 </div>
 
@@ -17,29 +20,29 @@
     <script>
         var app = new Vue(
             {
-                ell: "#app",
+                el: "#app",
                 data: {
-                    name: '',
-                    surname:''
+                    name: 'Yahya',
+                    surname: '',
+                    userData: {},
+                    level:''
                 },
                 methods: {
 
                 },
-                created: {
-                    initial: function () {
+                created:function () {
                         var theElement = this;
                         $.post("@Url.Action("GetUser", "Vue", new { id=@Model})",
                             function (data, status, jqXHR) {
-                                if (status == 'success')
-                                    console.log(data);
-                                else {
+                                if (status == 'success') {
+                                    theElement.userData = data;
+                                } else {
 
                                 }
                             }
 
                             );
-                    }
-                }
+                         }
 
             }
         );
