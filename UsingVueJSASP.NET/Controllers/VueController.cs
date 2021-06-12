@@ -35,5 +35,11 @@ namespace UsingVueJSASP.NET.Controllers
         {
             return View(id);
         }
+        [HttpPost]
+        public JsonResult GetUser(int )
+        {
+
+        }
+
     }
 }

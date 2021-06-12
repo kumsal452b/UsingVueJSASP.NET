@@ -95,8 +95,6 @@
             }
         },
         created: function () {
-
-
             var ele = this;
                 $.post("@Url.Action("GetUserList", "Vue", null)",
                     function (data, status, jqXHR) {
@@ -105,7 +103,6 @@
                         else {
 
                         }
-
                 }
                 )
                     .done(function () {
