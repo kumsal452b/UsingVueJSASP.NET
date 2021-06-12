@@ -34,7 +34,7 @@ namespace UsingVueJSASP.NET.Controllers
         public ActionResult SignIn(int id)
         {
             var theAdminCheck = theWork.AdminRepository.GetById(id);
-            if (theAdminCheck == null)
+            if (theAdminCheck != null)
             {
                 ViewBag.isAdmin = true;
             }

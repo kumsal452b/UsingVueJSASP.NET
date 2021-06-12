@@ -11,8 +11,11 @@
 <script src="~/Scripts/vue.min.js"></script>
 
 <div class="nav navbar" id="app">
-    <div class="nav-item align-baseline" id="app" v-if="@isAdmin=='true'">
+    <div class="nav-item align-baseline" id="app" >
+        <p>{{isAdmin}}</p>
         <p>{{userData.name}} {{userData.surname}}</p>
+        <p v-if="isAdmin">Admin</p>
+        <p v-else>User</p>
     </div>
 </div>
 
@@ -25,7 +28,8 @@
                     name: 'Yahya',
                     surname: '',
                     userData: {},
-                    level:''
+                    level: '',
+                    isAdmin: '@isAdmin' =='True' ? true : false
                 },
                 methods: {
 
