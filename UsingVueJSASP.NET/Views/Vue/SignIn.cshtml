@@ -4,6 +4,8 @@
 }
 @model int
 
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
 
 <div class="nav navbar">
     <div class="nav-item">
@@ -11,19 +13,36 @@
     </div>
 </div>
 
-@section script{
+@section scripts{
     <script>
-
         var app = new Vue(
-            ell: "#app_1",
-            data: {
+            {
+                ell: "#app",
+                data: {
+                    name: '',
+                    surname:''
+                },
+                methods: {
 
-            name: '',
-            surname: ''
-        }
+                },
+                created: {
+                    initial: function () {
+                        var theElement = this;
+                        $.post("@Url.Action("GetUser", "Vue", new { id=@Model})",
+                            function (data, status, jqXHR) {
+                                if (status == 'success')
+                                    console.log(data);
+                                else {
 
+                                }
+                            }
+
+                            );
+                    }
+                }
+
+            }
         );
-
     </script>
 }
 

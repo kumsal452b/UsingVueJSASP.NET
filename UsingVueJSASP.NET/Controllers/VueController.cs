@@ -36,9 +36,10 @@ namespace UsingVueJSASP.NET.Controllers
             return View(id);
         }
         [HttpPost]
-        public JsonResult GetUser(int )
+        public JsonResult GetUser(int id)
         {
-
+            var getList = theWork.UserRepository.GetById(id);
+            return Json(getList, JsonRequestBehavior.AllowGet);
         }
 
     }
