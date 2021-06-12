@@ -98,7 +98,7 @@
 
 
             var ele = this;
-                $.post("@Url.Action("SignIn", "Vue", null)",
+                $.post("@Url.Action("GetUserList", "Vue", null)",
                     function (data, status, jqXHR) {
                         if (status == 'success')
                             ele.UserData = data;

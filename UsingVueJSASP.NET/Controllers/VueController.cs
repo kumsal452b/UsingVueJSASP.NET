@@ -25,16 +25,15 @@ namespace UsingVueJSASP.NET.Controllers
         }
       
         [HttpPost]
-        public ActionResult Index(int id)
-        {
-            var getList = theWork.UserRepository.GetAll();
-            return View(getList);
-        }
-  
-        public JsonResult SignIn()
+        public JsonResult GetUserList()
         {
             var getList = theWork.UserRepository.GetAll();
             return Json(getList, JsonRequestBehavior.AllowGet);
+        }
+  
+        public ActionResult SignIn(int id)
+        {
+            return View(id);
         }
     }
 }
