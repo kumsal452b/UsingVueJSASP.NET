@@ -50,5 +50,9 @@ namespace UsingVueJSASP.NET.Controllers
             var getList = theWork.UserRepository.GetById(id);
             return Json(getList, JsonRequestBehavior.AllowGet);
         }
+        public ActionResult Save(int id)
+        {
+            return View(id);
+        }
     }
 }

@@ -13,6 +13,6 @@ namespace Vue.Domain
         public DateTime Date { get; set; }
         public int piece { get; set; }
         public int price { get; set; }
-        public ICollection<User> Users { get; set; }
+        public User User { get; set; }
     }
 }

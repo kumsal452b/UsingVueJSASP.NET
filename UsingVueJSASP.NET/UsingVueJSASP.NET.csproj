@@ -219,6 +219,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Vue\Index.cshtml" />
     <Content Include="Views\Vue\SignIn.cshtml" />
+    <Content Include="Views\Vue\Save.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

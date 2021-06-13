@@ -27,11 +27,8 @@
                         surname = c.String(),
                         usernaname = c.String(),
                         password = c.String(),
-                        Product_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.Products", t => t.Product_Id)
-                .Index(t => t.Product_Id);
+                .PrimaryKey(t => t.Id);
             
             CreateTable(
                 "dbo.Products",
@@ -42,16 +39,19 @@
                         Date = c.DateTime(nullable: false),
                         piece = c.Int(nullable: false),
                         price = c.Int(nullable: false),
+                        User_Id = c.Int(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.Users", t => t.User_Id)
+                .Index(t => t.User_Id);
             
         }
         
         public override void Down()
         {
-            DropForeignKey("dbo.Users", "Product_Id", "dbo.Products");
+            DropForeignKey("dbo.Products", "User_Id", "dbo.Users");
             DropForeignKey("dbo.Admins", "UserId", "dbo.Users");
-            DropIndex("dbo.Users", new[] { "Product_Id" });
+            DropIndex("dbo.Products", new[] { "User_Id" });
             DropIndex("dbo.Admins", new[] { "UserId" });
             DropTable("dbo.Products");
             DropTable("dbo.Users");

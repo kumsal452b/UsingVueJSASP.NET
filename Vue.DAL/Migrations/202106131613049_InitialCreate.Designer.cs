@@ -13,7 +13,7 @@ namespace Vue.DAL.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202106131223216_InitialCreate"; }
+            get { return "202106131613049_InitialCreate"; }
         }
         
         string IMigrationMetadata.Source
