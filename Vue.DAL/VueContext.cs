@@ -15,5 +15,6 @@ namespace Vue.DAL
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<Product> Products { get; set; }
     }
 }

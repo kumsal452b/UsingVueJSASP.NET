@@ -14,5 +14,6 @@ namespace Vue.Domain
         public string usernaname { get; set; }
         public string password { get; set; }
         public ICollection<Admin> Admins { get; set; }
+        public Product Product { get; set; }
     }
 }
