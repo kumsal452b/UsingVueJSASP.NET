@@ -2,9 +2,56 @@
 @{
     ViewBag.Title = "Save";
 }
+<link href="~/fonts/font-awesome.min.css" rel="stylesheet" />
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+<link rel="stylesheet" href="~/Content/Features-Blue.css">
+<link rel="stylesheet" href="~/Content/Footer-Dark.css">
+<link rel="stylesheet" href="~/Content/Header-Blue.css">
+<link rel="stylesheet" href="~/Content/Registration-Form-with-Photo.css">
+<link rel="stylesheet" href="~/Content/css/styles.css">
+<script src="~/Scripts/jquery-3.4.1.js"></script>
+<script src="~/Scripts/jquery-3.4.1.min.js"></script>
 
-<div>
-
-
+<header class="border rounded-0 header-blue">
+    <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Company Name</a><button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Link</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-toggle nav-link" aria-expanded="false" data-toggle="dropdown" href="#">Dropdown </a>
+                        <div class="dropdown-menu"><a class="dropdown-item" href="#">First Item</a><a class="dropdown-item" href="#">Second Item</a><a class="dropdown-item" href="#">Third Item</a></div>
+                    </li>
+                </ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group mb-0"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" id="search-field" name="search"></div>
+                </form><span class="navbar-text"> <a class="login" href="#">Log In</a></span><a class="btn btn-light action-button" role="button" href="#">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+</header>
+<div class="container text-info">
+    <div class="row">
+        <div class="col-md-3"><label class="col-form-label text-right">Product Name</label></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm d-md-flex flex-fill align-items-end align-content-center" type="text"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"><label class="col-form-label text-right">Date</label></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><input type="date"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"><label class="col-form-label text-right">Piece</label></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"><label class="col-form-label text-right">Price</label></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"><label class="col-form-label text-right"></label></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><button class="btn btn-success btn-block btn-lg text-uppercase shadow-lg" type="button">Request</button></div>
+    </div>
 </div>
-
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>

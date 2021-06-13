@@ -17,7 +17,7 @@
 
     </div>
     <div class="nav-item">
-        <button class="btn btn-outline-dark" id="createButton" >Buy New Product</button>
+        <button class="btn btn-outline-dark" id="createButton" v-on:click="goto">Buy New Product</button>
     </div>
 </div>
 <div class="d-flex justify-content-center">
@@ -56,7 +56,9 @@
                     isAdmin: '@isAdmin' =='True' ? true : false
                 },
                 methods: {
-                  
+                    goto: function () {
+                        window.location = "@Url.Action("Save", "Vue")?id=" + '@Model';
+                    }
                 },
                 created:function () {
                         var theElement = this;
