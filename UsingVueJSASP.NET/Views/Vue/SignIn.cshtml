@@ -11,13 +11,37 @@
 <script src="~/Scripts/vue.min.js"></script>
 
 <div class="nav navbar" id="app">
-    <div class="nav-item align-baseline" id="app" >
-        <p>{{isAdmin}}</p>
-        <p>{{userData.name}} {{userData.surname}}</p>
-        <p v-if="isAdmin">Admin</p>
-        <p v-else>User</p>
+    <div class="nav-item align-baseline" id="app">
+        <p v-if="isAdmin">{{userData.name}} {{userData.surname}} - Admin</p>
+        <p v-else="isAdmin">{{userData.name}} {{userData.surname}} - User</p>
+
+    </div>
+    <div class="nav-item">
+        <button class="btn btn-outline-dark" >Buy New Product</button>
     </div>
 </div>
+<div class="d-flex justify-content-center">
+    <div class="card">
+        <div class="card-header">
+            Product List
+        </div>
+        <div class="card-body">
+           <table class="table table-warning table-bordered d-xxl-table-cell">
+               <tr>
+                   <td>Product Name</td>
+                   <td>Product Date</td>
+                   <td>Price</td>
+                   <td>Piece</td>
+                   <td >#</td>
+               </tr>
+           </table>
+        </div>
+        <div class="card-footer">
+            Deneme
+        </div>
+    </div>
+</div>
+
 
 @section scripts{
     <script>
