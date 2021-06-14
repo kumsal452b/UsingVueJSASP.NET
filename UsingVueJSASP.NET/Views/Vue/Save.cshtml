@@ -1,32 +1,32 @@
-﻿
+﻿@using Vue.Domain
 @{
     ViewBag.Title = "Save";
+    var theProduct = new Product();
 }
-
 <script src="~/Scripts/jquery-3.4.1.js"></script>
 <script src="~/Scripts/jquery-3.4.1.min.js"></script>
 
 <div class="container text-info">
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Product Name</label></div>
-        <div class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm d-md-flex flex-fill align-items-end align-content-center" type="text"></div>
+        <div id="pname" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm d-md-flex flex-fill align-items-end align-content-center" type="text"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Date</label></div>
-        <div class="col-md-4 offset-md-0 align-content-center"><input type="date"></div>
+        <div id="date" class="col-md-4 offset-md-0 align-content-center"><input type="date"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Piece</label></div>
-        <div class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+        <div id="piece" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Price</label></div>
-        <div class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+        <div id="price" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right"></label></div>
         <div class="col-md-4 offset-md-0 align-content-center">
-        <button id="saveBtn" class="btn btn-success btn-block btn-lg text-uppercase shadow-lg" type="button">
+        <button id="saveBtn" class="btn btn-success btn-block btn-lg text-uppercase shadow-lg" v-on:click="save" type="button">
             <span class="hide spinner-border text-warning text-right" role="status" id="spinner"></span>
             Request</button>
         </div>
@@ -42,7 +42,17 @@
         },
         methods: {
             save: function () {
-                $("#spinner")
+                var button = $("#saveBtn");
+                var pname = $("#pname");
+                var price = $("#price");
+                var piece = $("#piece");
+                var date = $("date");
+                console.log("deneme");
+                if (pname.val() == "" || price.val() == "" || piece.val() == "" || date.val() == null) {
+                    alert("Problem ");
+                }
+
+                $.get("@Url.Action("Save", "Vue", new { product = Model })")
             }
         },
         created: function () {
