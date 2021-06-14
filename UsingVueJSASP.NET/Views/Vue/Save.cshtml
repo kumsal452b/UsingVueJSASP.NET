@@ -23,7 +23,7 @@
         <div class="col-md-3"><label class="col-form-label text-right">Price</label></div>
         <div id="price" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
     </div>
-    <div class="row">
+    <div class="row" id="app">
         <div class="col-md-3"><label class="col-form-label text-right"></label></div>
         <div class="col-md-4 offset-md-0 align-content-center">
         <button id="saveBtn" class="btn btn-success btn-block btn-lg text-uppercase shadow-lg" v-on:click="save" type="button">
@@ -49,9 +49,10 @@
                 var date = $("date");
                 console.log("deneme");
                 if (pname.val() == "" || price.val() == "" || piece.val() == "" || date.val() == null) {
-                    alert("Problem ");
+                    alert("Problem have been found ");
+                    return;
                 }
-
+                    
                 $.get("@Url.Action("Save", "Vue", new { product = Model })")
             }
         },
