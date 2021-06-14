@@ -28,7 +28,12 @@ namespace UsingVueJSASP.NET
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/Features-Blue.css",
+                      "~/Content/Footer-Dark.css",
+                      "~/Content/Header-Blue.css",
+                      "~/Content/Registration-Form-with-Photo.css",
+                      "~/Content/css/styles.css"));
         }
     }
 }
