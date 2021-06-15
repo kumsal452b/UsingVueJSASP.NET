@@ -16,11 +16,14 @@ namespace Vue.DAL
             this.mContext = context;
             AdminRepository = new AdminRepository(mContext);
             UserRepository = new UserRepository(mContext);
+            ProductRepository = new ProductRepository(mContext);
 
         }
 
         public IAdminRepository AdminRepository { get; private set; }
         public IUserRepository UserRepository { get; private set; }
+
+        public IProductRepository ProductRepository { get; private set; }
 
         public int complete()
         {

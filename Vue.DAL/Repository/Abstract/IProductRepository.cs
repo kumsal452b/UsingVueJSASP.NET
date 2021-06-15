@@ -7,7 +7,7 @@ using Vue.Domain;
 
 namespace Vue.DAL.Repository.Abstract
 {
-    public interface IProductRepository:IRepository<Product>
+    public interface IProductRepository : IRepository<Product>
     {
 
     }

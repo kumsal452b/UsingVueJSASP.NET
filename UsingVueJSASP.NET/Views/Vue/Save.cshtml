@@ -43,6 +43,8 @@
         methods: {
             save: function () {
                 var button = $("#saveBtn");
+                button.text("");
+                $("#spinner").show();
                 var pname = $("#pname");
                 var price = $("#price");
                 var piece = $("#piece");
@@ -50,6 +52,8 @@
                 console.log($("#date").val());
                 if (pname.val() == "" || price.val() == "" || piece.val() == "" || date == "" ) {
                     alert("Problem have been found ");
+                    button.text("Request");
+                    $("#spinner").hide();
                     return;
                 }
                 var theProduct = @Html.Raw(Json.Encode(theProduct));
@@ -59,7 +63,7 @@
                 theProduct.piece = piece.val();
                 theProduct.User_Id = '@Model';
 
-                $.get("@Url.Action("SaveToDb", "Vue")", theProduct, function () {
+                $.get("@Url.Action("SaveToDb", "Vue")", theProduct, function (data, status, jqXHR) {
 
 
                 })

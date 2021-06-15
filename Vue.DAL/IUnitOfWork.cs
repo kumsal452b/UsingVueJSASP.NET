@@ -7,11 +7,11 @@ using Vue.DAL.Repository.Abstract;
 
 namespace Vue.DAL
 {
-    public interface IUnitOfWork:IDisposable
+    public interface IUnitOfWork : IDisposable
     {
         IAdminRepository AdminRepository { get; }
-        IUserRepository UserRepository { get;}
-
+        IUserRepository UserRepository { get; }
+        IProductRepository ProductRepository { get;}
         int complete();
 
     }
