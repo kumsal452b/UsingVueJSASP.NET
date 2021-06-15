@@ -26,7 +26,7 @@
     <div class="row" id="app">
         <div class="col-md-3"><label class="col-form-label text-right"></label></div>
         <div class="col-md-4 offset-md-0 align-content-center">
-        <button id="saveBtn" class="btn btn-success btn-block btn-lg text-uppercase shadow-lg" v-on:click="save" type="button">
+        <button id="saveBtn" class="btn btn-success btn-block btn-lg text-uppercase shadow-lg" style="width:167px; height:46px " v-on:click="save" type="button">
             <span class="hide spinner-border text-warning text-right" role="status" id="spinner"></span>
             Request</button>
         </div>
@@ -43,17 +43,17 @@
         methods: {
             save: function () {
                 var button = $("#saveBtn");
-                button.text("");
                 $("#spinner").show();
+                button.text("R");
                 var pname = $("#pname");
                 var price = $("#price");
                 var piece = $("#piece");
                 var date = $("#date").val();
                 console.log($("#date").val());
-                if (pname.val() == "" || price.val() == "" || piece.val() == "" || date == "" ) {
+                @*if (pname.val() == "" || price.val() == "" || piece.val() == "" || date == "" ) {
                     alert("Problem have been found ");
                     button.text("Request");
-                    $("#spinner").hide();
+                    //$("#spinner").hide();
                     return;
                 }
                 var theProduct = @Html.Raw(Json.Encode(theProduct));
@@ -66,14 +66,12 @@
                 $.get("@Url.Action("SaveToDb", "Vue")", theProduct, function (data, status, jqXHR) {
 
 
-                })
+                })*@
             }
         },
         created: function () {
             console.log("problem solved")
-            $("#spinner").hide("slow", function () {
-
-            });
+            $("#spinner").hide();
         }
 
     });

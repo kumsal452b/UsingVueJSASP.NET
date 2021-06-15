@@ -56,15 +56,7 @@ namespace UsingVueJSASP.NET.Controllers
         }
         public ActionResult SaveToDb(Product theProduct)
         {
-            //var product = new Product
-            //{
-            //    name = theProduct.name,
-            //    Date = theProduct.Date,
-            //    piece = theProduct.piece,
-            //    price = theProduct.price,
-            //    User_Id = theProduct.Id,
-            //    User=new User()
-            //};
+
             theWork.ProductRepository.Add(theProduct);
             theWork.complete();
             return View();
