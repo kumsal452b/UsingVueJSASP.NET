@@ -9,19 +9,19 @@
 <div class="container text-info">
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Product Name</label></div>
-        <div id="pname" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm d-md-flex flex-fill align-items-end align-content-center" type="text"></div>
+        <div  class="col-md-4 offset-md-0 align-content-center"><input id="pname" class="shadow-sm form-control-sm d-md-flex flex-fill align-items-end align-content-center" type="text"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Date</label></div>
-        <div id="date" class="col-md-4 offset-md-0 align-content-center"><input type="date"></div>
+        <div  class="col-md-4 offset-md-0 align-content-center"><input id="date" type="date"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Piece</label></div>
-        <div id="piece" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+        <div  class="col-md-4 offset-md-0 align-content-center"><input id="piece" class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Price</label></div>
-        <div id="price" class="col-md-4 offset-md-0 align-content-center"><input class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><input  id="price" class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
     </div>
     <div class="row" id="app">
         <div class="col-md-3"><label class="col-form-label text-right"></label></div>
@@ -46,14 +46,22 @@
                 var pname = $("#pname");
                 var price = $("#price");
                 var piece = $("#piece");
-                var date = $("date");
-                console.log("deneme");
-                if (pname.val() == "" || price.val() == "" || piece.val() == "" || date.val() == null) {
+                var date = $("#date").val();
+                console.log($("#date").val());
+                if (pname.val() == "" || price.val() == "" || piece.val() == "" || date == "" ) {
                     alert("Problem have been found ");
                     return;
                 }
-                    
-                $.get("@Url.Action("Save", "Vue", new { product = Model })")
+                var model = @Html.Raw(Json.Encode(theProduct));
+                model.name = pname.val();
+                model.Date = date;
+                model.price = price.val();
+                model.piece = piece.val();
+               
+                $.get("@Url.Action("Save", "Vue", new { product =Model})", function () {
+
+
+                })
             }
         },
         created: function () {
