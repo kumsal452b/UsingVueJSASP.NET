@@ -17,11 +17,11 @@
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Piece</label></div>
-        <div  class="col-md-4 offset-md-0 align-content-center"><input id="piece" class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+        <div  class="col-md-4 offset-md-0 align-content-center"><input id="piece" class="shadow-sm form-control-sm flex-fill align-content-center" type="number"></div>
     </div>
     <div class="row">
         <div class="col-md-3"><label class="col-form-label text-right">Price</label></div>
-        <div class="col-md-4 offset-md-0 align-content-center"><input  id="price" class="shadow-sm form-control-sm flex-fill align-content-center" type="text"></div>
+        <div class="col-md-4 offset-md-0 align-content-center"><input  id="price" class="shadow-sm form-control-sm flex-fill align-content-center" type="number"></div>
     </div>
     <div class="row" id="app">
         <div class="col-md-3"><label class="col-form-label text-right"></label></div>
@@ -52,14 +52,14 @@
                     alert("Problem have been found ");
                     return;
                 }
-                var model = @Html.Raw(Json.Encode(theProduct));
-                model.name = pname.val();
-                model.Date = date;
-                model.price = price.val();
-                model.piece = piece.val();
-                model.User_Id = '@Model';
+                var theProduct = @Html.Raw(Json.Encode(theProduct));
+                theProduct.name = pname.val();
+                theProduct.Date = date;
+                theProduct.price = price.val();
+                theProduct.piece = piece.val();
+                theProduct.User_Id = '@Model';
 
-                $.get("@Url.Action("SaveToDb", "Vue")",model, function () {
+                $.get("@Url.Action("SaveToDb", "Vue")", theProduct, function () {
 
 
                 })
