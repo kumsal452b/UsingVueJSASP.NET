@@ -74,8 +74,9 @@
                 theProduct.piece = piece.val();
                 theProduct.User_Id = '@Model';
 
-                $.get("@Url.Action("SaveToDb", "Vue")", theProduct, function (data, status, jqXHR) {
-
+                $.post("@Url.Action("SaveToDb", "Vue")", theProduct, function (data, status, jqXHR) {
+                    $("#succes").show();
+                    setTimeout(function () { $("#succes").hide(); }, 3000);
 
                 }).done(function () {
                     text.html("Request");
@@ -84,10 +85,6 @@
                 }).fail(function (error) {
                     $("#danger").show();
                     setTimeout(function () { $("#danger").hide(); }, 3000);
-                }).succes(function () {
-
-                    $("#succes").show();
-                    setTimeout(function () { $("#succes").hide(); }, 3000);
                 });
             }
         },
