@@ -15,3 +15,4 @@ C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL
 C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.pdb
 C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.Migrations.InitialCreate.resources
 C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.csproj.GenerateResource.cache
+C:\Users\keski\Desktop\github-sample\UsingVueJSASP.NET\Vue.DAL\obj\Debug\Vue.DAL.Migrations.updateCreate.resources

@@ -54,5 +54,9 @@ namespace UsingVueJSASP.NET.Controllers
         {
             return View(id);
         }
+        public ActionResult SaveToDb(Product theProduct)
+        {
+            return View();
+        }
     }
 }
