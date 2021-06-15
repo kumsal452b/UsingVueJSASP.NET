@@ -57,7 +57,7 @@
                 model.Date = date;
                 model.price = price.val();
                 model.piece = piece.val();
-               
+                model.User_id = '@Model';
                 $.get("@Url.Action("Save", "Vue", new { product =Model})", function () {
 
 
