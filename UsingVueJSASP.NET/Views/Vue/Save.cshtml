@@ -59,7 +59,7 @@
                 model.piece = piece.val();
                 model.User_Id = '@Model';
 
-                $.get("@Url.Action("SaveToDb", "Vue", new { product =theProduct})", function () {
+                $.get("@Url.Action("SaveToDb", "Vue")",model, function () {
 
 
                 })
