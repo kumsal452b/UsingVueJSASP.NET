@@ -58,8 +58,8 @@ namespace UsingVueJSASP.NET.Controllers
         {
 
             theWork.ProductRepository.Add(theProduct);
-            theWork.complete();
-            return View();
+            var test=theWork.complete();
+            return View(test);
         }
     }
 }
